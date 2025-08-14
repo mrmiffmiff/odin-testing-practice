@@ -1,4 +1,4 @@
 export default function capitalize(inputString) {
     if (typeof inputString !== 'string') throw new Error();
-    else return '';
+    return inputString.charAt(0).toUpperCase() + inputString.slice(1);
 }
