@@ -11,7 +11,11 @@ const calculator = {
         if (typeof a !== "number" || typeof b !== "number") return NaN;
         return a * b;
     },
-    divide: ' placeholder'
+    divide: (a, b) => {
+        if (typeof a !== "number" || typeof b !== "number") return NaN;
+        if (b === 0) return NaN;
+        return a / b;
+    }
 };
 
 export default calculator;

@@ -30,3 +30,15 @@ test('Attempting to multiply at least one non-number returns a graceful "error"'
 test('Multiplying two numbers returns their product', () => {
     expect(calculator.multiply(5, 3)).toBe(15);
 });
+
+test('Attempting to divide at least one non-number returns a graceful "error"', () => {
+    expect(calculator.divide('hello', 3)).toBe(NaN);
+});
+
+test('Attempting to divide by zero returns a graceful "error"', () => {
+    expect(calculator.divide(12, 0)).toBe(NaN);
+});
+
+test('Dividing two numbers returns their quotient', () => {
+    expect(calculator.divide(24, 6)).toBe(4);
+})
