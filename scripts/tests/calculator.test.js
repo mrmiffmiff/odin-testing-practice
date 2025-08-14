@@ -14,3 +14,11 @@ test('Attempting to add at least one non-number returns a graceful "error"', () 
 test('Adding two numbers returns their sum', () => {
     expect(calculator.add(5, 7)).toBe(12);
 });
+
+test('Attempting to subtract at least one non-number returns a graceful "error"', () => {
+    expect(calculator.subtract('hello', 3)).toBe(NaN);
+});
+
+test('Subtracting two numbers returns their difference', () => {
+    expect(calculator.subtract(12, 7)).toBe(5);
+});
