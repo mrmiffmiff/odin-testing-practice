@@ -7,3 +7,10 @@ test('Calculator object contains Add, Subtract, Multiply, and Divide properties 
     expect(calculator).toHaveProperty('divide');
 });
 
+test('Attempting to add at least one non-number returns a graceful "error"', () => {
+    expect(calculator.add('hello', 3)).toBe(NaN);
+});
+
+test('Adding two numbers returns their sum', () => {
+    expect(calculator.add(5, 7)).toBe(12);
+});
