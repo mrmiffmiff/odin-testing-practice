@@ -22,3 +22,11 @@ test('Attempting to subtract at least one non-number returns a graceful "error"'
 test('Subtracting two numbers returns their difference', () => {
     expect(calculator.subtract(12, 7)).toBe(5);
 });
+
+test('Attempting to multiply at least one non-number returns a graceful "error"', () => {
+    expect(calculator.multiply('hello', 3)).toBe(NaN);
+});
+
+test('Multiplying two numbers returns their product', () => {
+    expect(calculator.multiply(5, 3)).toBe(15);
+});
